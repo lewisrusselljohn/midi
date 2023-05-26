@@ -17,13 +17,6 @@ void PrintHelp();
 void CALLBACK MidiInCallback(HMIDIIN hMidiIn, UINT wMsg, 
     DWORD_PTR dwInstance, DWORD_PTR dwParam1, DWORD_PTR dwParam2);
 
-/*
-    wMsg: type of MIDI message
-    dwInstance: user defined value specified when opening the input device
-    dwParam1, dwParam2: information associated with the MIDI message. if wMsg is 
-    MIM_DATA, dwParam1 contains the MIDI message.
-*/
-
 int main()
 {
     InitMidiIn();
@@ -161,6 +154,12 @@ void PrintHelp()
     printf(" exit        - quit the program\n");
 }
 
+/*
+    wMsg: type of MIDI message
+    dwInstance: user defined value specified when opening the input device
+    dwParam1, dwParam2: information associated with the MIDI message. if wMsg is 
+    MIM_DATA, dwParam1 contains the MIDI message.
+*/
 void CALLBACK MidiInCallback(HMIDIIN hMidiIn, UINT wMsg, 
     DWORD_PTR dwInstance, DWORD_PTR dwParam1, DWORD_PTR dwParam2)
 {
