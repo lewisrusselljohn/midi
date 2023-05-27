@@ -6,4 +6,3 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/audio/midi-and-direct
 
 "However, by emulating the behavior of older software and hardware, the midiOutXxx and midiInXxx functions sacrifice the precision timing and enhanced functionality that are now available through the DirectMusic API"
 
-So it's better to explore the DirectMusic API.
